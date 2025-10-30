@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Penjualan Sederhana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Aplikasi Penjualan</h1>
+
+      <div class="login-area">
+        <textarea
+          id="jwt-token-input"
+          placeholder="Paste Token JWT Anda setelah login..."
+        ></textarea>
+        <button id="login-button">Simpan Token</button>
+        <span id="login-status">Status: Belum Login</span>
+      </div>
+
+      <nav>
+        <button data-page="dashboard">Dashboard</button>
+        <button data-page="master">Master Data (CRUD)</button>
+        <button data-page="transaksi">Transaksi Penjualan</button>
+      </nav>
+
+      <main>
+        <section id="page-dashboard" class="page">
+          <h2>Dashboard: 5 Produk Terlaris</h2>
+          <table id="top-products-table">
+            <thead>
+              <tr>
+                <th>Nama Produk</th>
+                <th>Total Penjualan</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <section id="page-master" class="page hidden">
+          <h2>Master Data Produk</h2>
+          <form id="product-form">
+            <input type="hidden" id="product-id" />
+            <input
+              type="text"
+              id="product-code"
+              placeholder="Kode Produk"
+              required
+            />
+            <input
+              type="text"
+              id="product-name"
+              placeholder="Nama Produk"
+              required
+            />
+            <input
+              type="number"
+              id="product-price"
+              placeholder="Harga"
+              required
+            />
+            <input
+              type="number"
+              id="product-stock"
+              placeholder="Stok"
+              required
+            />
+            <button type="submit">Simpan Produk</button>
+            <button type="button" id="clear-form-btn">Batal Edit</button>
+          </form>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Cari nama produk..."
+          />
+          <table id="products-table">
+            <thead>
+              <tr>
+                <th>Kode</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <section id="page-transaksi" class="page hidden">
+          <h2>Form Transaksi Penjualan</h2>
+          <form id="sales-form">
+            <input
+              type="text"
+              id="sales-ref"
+              placeholder="No. Referensi (misal: INV-001)"
+              required
+            />
+
+            <label for="sales-product">Pilih Produk:</label>
+            <select id="sales-product" required>
+              <option value="">-- Memuat Produk --</option>
+            </select>
+
+            <label
+              >Stok Tersedia: <span id="sales-available-stock">0</span></label
+            >
+
+            <label for="sales-quantity">Quantity:</label>
+            <input
+              type="number"
+              id="sales-quantity"
+              min="1"
+              value="1"
+              required
+            />
+
+            <label for="sales-price">Price (Otomatis):</label>
+            <input type="number" id="sales-price" readonly />
+
+            <label for="sales-subtotal">Subtotal (Otomatis):</label>
+            <input type="text" id="sales-subtotal" readonly />
+
+            <button type="submit">Simpan Transaksi</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

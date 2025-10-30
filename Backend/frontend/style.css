@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-area {
+    background: #fdfdea;
+    border: 1px solid #e0e0b1;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.login-area textarea {
+    width: 70%;
+    height: 40px;
+}
+
+#login-status {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.page.hidden {
+    display: none;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav button {
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+#product-form {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+button[type="button"] {
+    background-color: #ffc107;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+}
+
+input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
