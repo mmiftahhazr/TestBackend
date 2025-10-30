@@ -1,14 +1,14 @@
-# Aplikasi Penjualan Sederhana
+# Test Backend
 
-Aplikasi ini adalah backend dan frontend sederhana untuk manajemen produk dan transaksi penjualan, dilengkapi autentikasi JWT, dashboard produk terlaris, serta fitur CRUD produk. Dibangun menggunakan Node.js (Express, Sequelize, MySQL) dan frontend HTML/JS sederhana.
+Repository ini berisi aplikasi backend sederhana dengan Node.js dan beserta frontend statis dan script PHP untuk keperluan Test Backend Web Programmer.
 
-## Fitur Utama
+## Deskripsi Singkat
 
 - **Autentikasi JWT**: Register & login user, proteksi endpoint.
 - **CRUD Produk**: Tambah, edit, hapus, dan cari produk.
 - **Transaksi Penjualan**: Catat penjualan produk, update stok otomatis.
 - **Dashboard**: Lihat 5 produk terlaris.
-- **Frontend Sederhana**: SPA dengan HTML, CSS, dan JavaScript.
+- **Frontend Sederhana**: Aplikasi sederhana dengan HTML, CSS, dan JavaScript.
 
 ## Struktur Project
 
